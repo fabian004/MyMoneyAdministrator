@@ -56,7 +56,7 @@ const ExpenseList = () => {
     };
 
     fetchExpenses();
-  }, [user]);
+  }, [user,dispatch]);
 
   useEffect(() => {
     const total = expenses.reduce((sum, expense) => {
@@ -64,7 +64,7 @@ const ExpenseList = () => {
       return sum + amount;
     }, 0);
     dispatch(setTotal(total));
-  }, [expenses]);
+  }, [expenses,dispatch]);
 
   if (loading) return <CircularProgress />;
   if (error) return <Typography color="error">{error}</Typography>;

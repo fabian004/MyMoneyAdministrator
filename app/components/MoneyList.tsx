@@ -59,7 +59,7 @@ const MoneyList = () => {
     };
 
     fetchMoneyEntries();
-  }, [user]);
+  }, [user,dispatch]);
 
   useEffect(() => {
     const total = moneyEntries.reduce((sum, money) => {
@@ -69,7 +69,7 @@ const MoneyList = () => {
       return sum + money.amount;
     }, 0);
     dispatch(setEarningsTotal(total));    
-  }, [moneyEntries]);
+  }, [moneyEntries,dispatch]);
 
   if (loading) return <CircularProgress />;
   if (error) return <Typography color="error">{error}</Typography>;
