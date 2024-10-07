@@ -3,7 +3,7 @@
 import { Expense } from "../interfaces/Expense";
 import { Money } from "../interfaces/Money";
 
-const API_URL = 'http://localhost:3000/api'; // Cambia esto si cambias de URL
+const API_URL = 'https://nodejsmoneyadministrator.onrender.com/api'; // Cambia esto si cambias de URL
 
 // Funciones para manejar las solicitudes a la API
 
