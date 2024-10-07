@@ -54,7 +54,7 @@ const Totals = () => {
             Patrimonio:
           </Box>
           <Box sx={{ color: 'text.primary', fontSize: '1.2rem' }}>
-            ${grandTotal + 250000} (Gran Total + Carro)
+            ${(grandTotal + 250000).toFixed(2)} (Gran Total + Carro)
           </Box>
         </Box>
       )}

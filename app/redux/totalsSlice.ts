@@ -22,12 +22,12 @@ const totalsSlice = createSlice({
       state.user = action.payload;
     },
     setTotal(state, action: PayloadAction<number>) {
-      state.total = action.payload;
-      state.grandTotal = state.earningsTotal - state.total
+      state.total = parseFloat(action.payload.toFixed(2));
+      state.grandTotal = parseFloat((state.earningsTotal - state.total).toFixed(2));
     },
     setEarningsTotal(state, action: PayloadAction<number>) {
-      state.earningsTotal = action.payload;
-      state.grandTotal = state.earningsTotal - state.total
+      state.earningsTotal = parseFloat(action.payload.toFixed(2));
+      state.grandTotal = parseFloat((state.earningsTotal - state.total).toFixed(2));
     },
   },
 });
