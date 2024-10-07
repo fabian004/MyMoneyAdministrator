@@ -51,8 +51,8 @@ const MoneyList = () => {
         }, 0);
         dispatch(setEarningsTotal(total));
 
-      } catch (error: any) {
-        setError(error.message);
+      } catch (error) {
+        setError(error instanceof Error ? error.message : "Unknown error");
       } finally {
         setLoading(false);
       }
